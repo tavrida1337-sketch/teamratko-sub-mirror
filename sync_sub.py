@@ -1,15 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Sync upstream TeamRatko sub (INCY-style request with x-hwid) -> sub_plain.txt.
-
-Логика зеркала:
-- тянет ориг с тем же HWID, что и клиент INCY
-- полностью перезаписывает sub_plain.txt (новые добавляются, пропавшие удаляются)
-- печатает дифф added/removed по именам серверов
-
-URL и HWID берутся из env (для GitHub Actions secrets),
-иначе используются дефолты ниже.
-"""
 import os
 import ssl
 import sys
